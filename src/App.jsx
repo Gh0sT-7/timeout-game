@@ -1,5 +1,5 @@
-import Player from './components/player/Player.jsx';
-import Challenge from './components/challenge/Challenge.jsx';
+import Player from './components/Player/Player.jsx';
+import Challenge from './components/Challenge/Challenge.jsx';
 
 function App() {
     return (

@@ -1,0 +1,58 @@
+.result-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #d7fcf8;
+    
+    &[open] {
+        animation: slide-in-from-top 0.35s ease-out;
+    }
+    
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    
+    h2 {
+        margin: 0 0 0.25rem 0;
+        font-size: 3rem;
+        font-family: 'Handjet', monospace;
+        text-transform: uppercase;
+    }
+    
+    progress {
+        margin: 0;
+        width: 100%;
+        height: 1.5rem;
+        accent-color: #46cebe;
+    }
+    
+    p {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+
+        strong {
+            color: #10655b;
+        }
+    }
+    
+    
+    form {
+        text-align: right;
+    }
+    
+    button {
+        margin-top: 1rem;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        background: #12352f;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #edfcfa;
+
+        &:hover {
+            background: #051715;
+        }
+    }
+    
+}
