@@ -1,3 +1,4 @@
+import './Player.scss';
 import { useState, useRef } from 'react';
 
 export default function Player() {
