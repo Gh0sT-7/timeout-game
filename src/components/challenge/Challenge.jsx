@@ -1,6 +1,6 @@
 import './Challenge.scss';
 import { useState, useRef } from 'react';
-import ResultsModal from '../ResultsModal/ResultsModal';
+import ResultModal from '../ResultModal/ResultModal';
 
 export default function Challenge({ title, targetTime }) {
     const timer = useRef();
@@ -9,12 +9,10 @@ export default function Challenge({ title, targetTime }) {
     const [timerStarted, setTimerStarted] = useState(false);
     const [timerExpired, setTimerExpired] = useState(false);
 
-    // let timer;
-
     function handleStart() {
         timer.current = setTimeout(() => {
             setTimerExpired(true);
-            dialog.current.showModal();
+            dialog.current.open();
         }, targetTime * 1000);
 
         setTimerStarted(true);
@@ -26,7 +24,7 @@ export default function Challenge({ title, targetTime }) {
 
 	return (
         <>
-            <ResultsModal ref={dialog} targetTime={targetTime} result="lost" />
+            <ResultModal ref={dialog} targetTime={targetTime} result="lost" />
 
             <section className='challenge'>
                 <h2>{title}</h2>
